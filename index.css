@@ -8,7 +8,7 @@
 }
 
 #bottom-seat {
-  height: 30vh;
+  height: 40vh;
   background-color: white;
   position: absolute;
   bottom: 0;
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 30px;
   gap: 10px;
 }
 
