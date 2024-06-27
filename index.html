@@ -4,10 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>intent test</title>
+  <link href="./index.css" rel="stylesheet">
 </head>
 <body>
-  <a href="supertoss://qr-checkin?referrer=widget" target="_blank">토스</a>
-  <a href="intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end" target="_blank">인스타그램</a>
-  <a href="kakaomap://open" target="_blank">카카오맵</a>
+  <div>계좌번호</div>
+  <div>000000-11-222222 <img src="./copy.png" alt="복사" id="copy"/></div>
+
+  <div id="overay">
+    <div id="bottom-seat">
+      <h2>계좌번호를 복사했어요!</h2>
+      <span>계좌이체하러 가기</span>
+      <div>
+      <a href="supertoss://qr-checkin?referrer=widget" target="_blank"><img src="./Toss_Logo_Primary.png" class="logo"></a>
+      <a href="kakaopay://" target="_blank"><img src="./payment_icon_yellow_medium.png" class="logo"></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let isClicked = false;
+
+    const copyImage = document.getElementById('copy');
+
+    copyImage.addEventListener('click', () => {
+      isClicked = true
+      document.getElementById('overay').style.display = 'block';
+    })
+
+
+  </script>
 </body>
 </html>
